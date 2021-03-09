@@ -1,12 +1,13 @@
 /* ##### Root Element, change here and it all changes ##### */
 :root {
     --prim-clr: #FE7D4E;                    /* Main design color */
-    --main-txt-clr: #333333;                /* Main text color */
-    --sec-txt-clr: #543D32;                 /* Secondary text color (used in nav) */
-    --light-gray-clr: #707070; 
-    --prim-background-clr: #FFF7F3;         /* Used for baclgrounds and nav */
-    --BOTM-background-clr: #FEFDF9; 
-    --show-case-background-clr: #FEF2F2;
+    --main-h-txt-clr: #333333;              /* Logo text color */
+    --main-fnt-clr: #543D32;                /* Secondary text color (used in nav) */
+    --light-gray-clr: #707070;              /* Book of the month text color */
+    --prim-background-clr: #FFF7F3;         /* Used for backgrounds and nav */
+    --BOTM-background-clr: #FEFDF9;         /* Book of the month intro color */
+    --show-case-background-clr: #FEF2F2;    /* Book of the month showcase backgrond color */
+    --BOTM-F-T-clr: #b4a4a0;                /* Book of the month color for where it says "forfatter" & "type" */
 }
 
 
@@ -23,16 +24,21 @@ body{
     overflow-x: hidden;
 }
 
-h1, h2, p {
+h1, h2, h3, h4, h5, p {
     font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
+    color: var(--main-h-txt-clr);
     font-weight: bold;
 }
 
-h2, h3 {
-    color: var(--sec-txt-clr);
+h2, h3, h4 {
+    color: var(--main-fnt-clr);
+}
+
+h5 {
+    color:var(--BOTM-F-T-clr);
 }
 
 .change-to-OR{
@@ -107,16 +113,74 @@ header {
 
 
 
-/* ##### Mobile first! designed after IPhone: 6/7/8/ iOS 11 ##### */
-@media screen and (max-width: 376px) {
-    /* ##### Navigation bar ###### */
+/* ##### Second hand ###### */
+.second-hand-top a {
+    display: inline-block;
+    width: 88px;
+}
 
+.second-hand-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.second-hand-selector li {
+    list-style-type:none;
+}
+
+
+
+/* ##### book of the month ###### */
+    .book-otm-intro {
+        background-color: var(--BOTM-background-clr);
+    }
+
+    .book-otm-intro p {
+        color: var(--light-gray-clr);
+    }
+
+    .book-otm-intro a {
+        color: var(--main-fnt-clr);
+    }
+
+
+/* ##### Mobile first! designed after IPhone: 6/7/8/ iOS 11 ##### */
+/* Note: eye balled a bit of posistioning in some areas (change if time)*/
+@media screen and (max-width: 376px) {
+
+    /* ##### Edits in gloab artibutes for mobile ##### */
     h1 {
         font-size: 20px;
     }
+    h2 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 14px;
+    }
+    
+    p {
+        font-size: 12px;
+    }
 
-    /* ##### hamburger menu is created ##### */
-    #toggle-menu {                 /* eye balled posistion (change if time)*/
+    .content-wrapper {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    /* ##### Navigation bar ###### */
+    /* ##### hamburger menu is also created ##### */
+    
+    .hamburger {
+        height: 20px;
+        width: 20px;
+
+        right: 15px;
+        top: 5px;
+    }
+
+    #toggle-menu {
         display: block;
         height: 20px;
         width: 20px;
@@ -168,7 +232,43 @@ header {
 
 
     /* ##### mobile hero ###### */
-    .hero p {
-        font-size: 15px;
+
+
+
+
+    /* ##### mobile second hand ###### */
+    .second-hand {
+        margin-bottom: 30px;
+    }
+
+    .second-hand-selector {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .second-hand-selector  li{
+        margin-bottom: 10px;
+    }
+
+
+
+
+    /* ##### mobile book of the month ###### */
+    /* Note for next time flex order */
+    .book-otm-intro {
+        text-align: center;
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    .book-otm-intro p {
+        display: inline-block;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .book-otm-show-case img {
+        height: 50%;
+        width: 50%;
     }
 }
