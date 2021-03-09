@@ -1,0 +1,174 @@
+/* ##### Root Element, change here and it all changes ##### */
+:root {
+    --prim-clr: #FE7D4E;                    /* Main design color */
+    --main-txt-clr: #333333;                /* Main text color */
+    --sec-txt-clr: #543D32;                 /* Secondary text color (used in nav) */
+    --light-gray-clr: #707070; 
+    --prim-background-clr: #FFF7F3;         /* Used for baclgrounds and nav */
+    --BOTM-background-clr: #FEFDF9; 
+    --show-case-background-clr: #FEF2F2;
+}
+
+
+
+
+/* ##### Global values ##### */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background: var(--prim-background-clr);
+    overflow-x: hidden;
+}
+
+h1, h2, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h2, h3 {
+    color: var(--sec-txt-clr);
+}
+
+.change-to-OR{
+    color: var(--prim-clr);
+}
+
+a {
+    text-decoration: none;
+}
+
+.content-wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+
+/* ##### Header & Navigation bar ###### */
+header {
+    background: var(--prim-background-clr);
+    position: sticky;
+    margin: 0;
+}
+
+.main-nav a {
+    color: var(--sec-txt-clr);
+}
+
+.main-nav li {
+    list-style-type:none;
+}
+
+#toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.create-user {
+    color: var(--prim-clr);
+    background: rgb(254, 125, 78,.30);
+    border-style: solid;
+    border-color: rgb(254, 125, 78,.31);
+    border-width: 1px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+/* ##### Hero ###### */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(imgs/hero\ image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.hero p {
+    text-align: center;
+    color: #ffffff;
+}
+
+
+
+
+/* ##### Mobile first! designed after IPhone: 6/7/8/ iOS 11 ##### */
+@media screen and (max-width: 376px) {
+    /* ##### Navigation bar ###### */
+
+    h1 {
+        font-size: 20px;
+    }
+
+    /* ##### hamburger menu is created ##### */
+    #toggle-menu {                 /* eye balled posistion (change if time)*/
+        display: block;
+        height: 20px;
+        width: 20px;
+
+        position: absolute;
+        right: 15px;
+        top: 5px;
+    }
+
+    .main-nav {
+        transition: transform .3s ease-in;
+        display: flex;
+
+    }
+
+    .main-nav ul {
+        position: absolute;
+        padding: 0;
+        margin: 0%;
+
+        background-color: var(--prim-background-clr);
+
+        width: 100vw;
+
+        justify-content: center;
+    }
+
+    .create-user {
+        margin-left: 40% ;
+        width: 50px;
+    
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #toggle-menu + .main-nav {
+        transform: translateX(100vw);
+    }
+
+    #toggle-menu:checked + .main-nav {
+        transform: translateX(0);
+    }
+
+
+
+
+    /* ##### mobile hero ###### */
+    .hero p {
+        font-size: 15px;
+    }
+}
