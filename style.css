@@ -2,7 +2,7 @@
 :root {
     --prim-clr: #FE7D4E;                    /* Main design color */
     --main-h-txt-clr: #333333;              /* Logo text color */
-    --main-fnt-clr: #543D32;                /* Secondary text color (used in nav) */
+    --main-fnt-clr: #543D32;                /* Main text color (used in nav) */
     --light-gray-clr: #707070;              /* Book of the month text color */
     --prim-background-clr: #FFF7F3;         /* Used for backgrounds and nav */
     --BOTM-background-clr: #FEFDF9;         /* Book of the month intro color */
@@ -14,6 +14,10 @@
 
 
 /* ##### Global values ##### */
+html {
+    scroll-behavior: smooth;
+}
+
 body, html {
     height: 100%;
     margin: 0;
@@ -67,27 +71,32 @@ a {
     color: var(--prim-clr);
 }
 
-
 .cust-btn {
     background-color: var(--prim-clr);
-    text-align: center;
 
     display: inline-block;
     
-    max-width: 400px;
-    width: 100%;
-
-    max-height: 75px;
-    height: 100%;
+    padding: 1rem;
 
     border-radius: 1rem;
 
-    text-align: center;
+    margin: auto;
     white-space: nowrap;
+
+    transition: 0.2s;
 }
 .cust-btn h4 {
     color: white;
 }
+
+.book, .cust-btn {
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+.cust-btn:hover {
+    transform: scale(1.05);
+}
+
 
 
 
@@ -108,13 +117,17 @@ header {
     align-items: center;
 }
 
-.main-nav a {
-    color: var(--sec-txt-clr);
+.direction {
+    color: var(--main-fnt-clr);
 }
 
 .main-nav li {
     list-style-type:none;
     margin-left: 25px;
+    font-weight: bold;
+    font-size: 25px;
+    
+    transition: 0.2s;
 }
 
 .hamburger {
@@ -136,11 +149,14 @@ header {
     margin-bottom: 10px;
 
     display: inline-block;
-    width: 120px;
-    height: 50px;
+    padding: 1rem;
 
     text-align: center;
     white-space: nowrap;
+}
+
+.main-nav li:hover {
+    transform: scale(1.05);
 }
 
 
@@ -203,81 +219,98 @@ header {
     width: 80%;
 }
 
+.showcase {
+    transition: 0.5s;
+}
+
+.showcase:hover {
+    transform: scale(1.15);
+}
+
+
 
 
 /* ##### book of the month ###### */
-    .book-otm .content-wrapper {
-        display:flex;
-        flex-direction: row;
+.book-otm .content-wrapper {
+    display:flex;
+    flex-direction: row;
 
-        height: 75vh;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+    height: 75vh;
+    padding-left: 20px;
+    padding-right: 20px;
+ }
 
-    .book-otm-intro {
-        background-color: var(--BOTM-background-clr);
-        padding-left: 50px;
-        padding-right: 50px;
-        text-align: center;
-    }
+.book-otm-intro {
+    background-color: var(--BOTM-background-clr);
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
 
-    .book-otm-intro p {
-        color: var(--light-gray-clr);
-    }
+.book-otm-intro p {
+     color: var(--light-gray-clr);
+}
 
-    .book-otm-intro a {
-        color: var(--main-fnt-clr);
-    }
+.book-otm-intro a {
+    color: var(--main-fnt-clr);
+    font-size: 18px;
+}
 
-    .book-otm-show-case {
-        padding-right: 10%;
-        background-color: var(--show-case-background-clr);
-        display: flex;
-        flex-direction: row;
-        
-    }
+.book-otm-show-case {
+    padding-right: 10%;
+    background-color: var(--show-case-background-clr);
+    display: flex;
+    flex-direction: row;       
+}
 
-    .book-otm-show-case img {
-        height: 70%;
-        margin: 30px;
-    }
+.book-otm-show-case img {
+    height: 70%;
+    margin: 30px;
+}
 
-    .book-otm-show-case h5 {
-        margin-bottom: 0px;
-    }
+.book-otm-show-case h5 {
+    margin-bottom: 0px;
+}
 
-    .book-otm-show-case h4 {
-        margin-top: 0px;
-    }
+.book-otm-show-case h4 {
+    margin-top: 0px;
+}
 
-    .book-otm-show-case a {
-        max-width: 200px;
-    }
+.auth-type-display {
+    display: flex;
+    flex-direction: row;
+}
 
-    .auth-type-display {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .auth {
-        margin-right: 30px;
-    }
+.auth {
+     margin-right: 30px;
+}
 
 
 
 
 /* ##### Book club ##### */
 .book-club {
-    background-image: url(imgs/Cover-Bogklub.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20)), url(imgs/Cover-Bogklub.jpg);
     width: 100vw;
-    height: 754px;
+    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
+
+
 /* ##### Footer ##### */
+
+footer {
+    background-color: var(--BOTM-background-clr);
+    margin-top: 200px;
+}
 
 .location p {
     margin-bottom: 0px;
@@ -294,19 +327,50 @@ footer h4 {
 
 footer p {
     margin-top: 0px;
+    color: var(--main-fnt-clr);
 }
 
 .social-icon {
     fill: var(--prim-clr);
     height: 50px;
     width: 50px;
+
+    transition: 0.3s;
+}
+
+footer .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.foot-box-1 {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.foot-box-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.facebook:hover {
+    fill: #4267B2; /* facebook blue */
+}
+
+.instagram:hover {
+    fill:  #833AB4;
+}
+
+.twitter:hover {
+    fill: #00ACEE
 }
 
 
 
 
 /* ##### Mobile first! designed after IPhone: 6/7/8/ iOS 11 ##### */
-/* Note: eye balled a bit of posistioning in some areas (change if time)*/
 @media screen and (max-width: 376px) {
 
     /* ##### Edits in gloab artibutes for mobile ##### */
@@ -327,6 +391,10 @@ footer p {
     .content-wrapper {
         max-width: 350px;
         margin: 0 auto;
+    }
+
+    .cust-btn {
+        padding: 0.15rem;
     }
 
     /* ##### Navigation bar ###### */
@@ -411,6 +479,10 @@ footer p {
 
 
     /* ##### mobile second hand ###### */
+    .second-hand-top a {
+        width: 100px;
+    }
+
     .book-otm {
         position: relative;
     }
@@ -461,6 +533,10 @@ footer p {
         padding-right: 20px;
     }
 
+    .book-otm-intro a {
+        font-size: 16px;
+    }
+
     .book-otm-show-case {
         margin-bottom: 1rem;
         display: flex;
@@ -482,20 +558,32 @@ footer p {
     /* ##### Mobile book club ##### */
     .book-club {
         height: 150px;
+        justify-content: flex-start;
     }
 
     .book-club .cust-btn {
         height: 70px;
         width: 200px;
-
-        margin-top: 30px;
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
 
 
     /* ##### Mobile footer ##### */
+    footer {
+        margin-top: 50px;
+    }
+
+    footer .content-wrapper {
+        flex-direction: column;
+    }
+
+    .foot-box-1 {
+        margin: 0;
+    }
+
     footer img {
+        margin-left: -12px;
         width: 100vw; 
     }
 }

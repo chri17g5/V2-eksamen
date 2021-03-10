@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FantasyBooks</title>
     <meta name="description" content="De bedste fantasy bøger kan købes her, på fantasy books! Vi har et stort ud valg, alt fra Harry Potter til Lord of the rings!">
+
+    <title>FantasyBooks</title>
 
     <link rel="stylesheet" href="style.css">
     
@@ -14,18 +15,18 @@
 <body>
 
     <!--###### header & nav ######-->
-    <header>
-        <h1><span class="change-to-OR">Fantasy</span>books</h1>
+    <header> <!--id="navbar"-->
+        <a href="#"><h1><span class="change-to-OR">Fantasy</span>books</h1></a>
 
         <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg class="hamburger" height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/></svg>
-        
+            
         <input type="checkbox" id="toggle-menu">
         <nav class="main-nav">
             <ul>
-                <li><a href="#">Bogklub</a></li>
-                <li><a href="#">Top 10</a></li>
-                <li><a href="#">Second hand</a></li>
-                <li><a href="#" class="create-btn">Opret Bruger</a></li>
+                <li><a class="direction" href="#">Bogklub</a></li>
+                <li><a class="direction" href="#">Top 10</a></li>
+                <li><a class="direction" href="#">Second hand</a></li>
+                <li><a class="create-btn" href="#" >Opret Bruger</a></li>
             </ul>
         </nav>
     </header>
@@ -51,10 +52,10 @@
                     <a href="#"><h4>Vis mere ⟶</h4></a>
                 </div> 
                 <ul class="second-hand-selector">
-                    <li><a href="#"><img src="imgs/second-hand/HarryPotterOgDeVisesSten.png" alt="Harry Potter og de vise sten"></a></li>
-                    <li><a href="#"><img src="imgs/second-hand/HarryPotterOgFangenFraAzkaban.png" alt="Harry Potter Og Fangen Fra Azkaban"></a></li>
-                    <li><a href="#"><img src="imgs/second-hand/MortalEnginesDeRullendeByer.png" alt="Mortal Engines De Rullende Byer"></a></li>
-                    <li><a href="#"><img src="imgs/second-hand/Vildheks.png" alt="Vildheks"></a></li>
+                    <li><a href="#"><img class="book showcase" src="imgs/second-hand/HarryPotterOgDeVisesSten.png" alt="Harry Potter og de vise sten"></a></li>
+                    <li><a href="#"><img class="book showcase" src="imgs/second-hand/HarryPotterOgFangenFraAzkaban.png" alt="Harry Potter Og Fangen Fra Azkaban"></a></li>
+                    <li><a href="#"><img class="book showcase" src="imgs/second-hand/MortalEnginesDeRullendeByer.png" alt="Mortal Engines De Rullende Byer"></a></li>
+                    <li><a href="#"><img class="book showcase" src="imgs/second-hand/Vildheks.png" alt="Vildheks"></a></li>
                 </ul>
             </div>  
         </section>
@@ -78,11 +79,11 @@
 
                 <!--Current book of the month display-->
                 <div class="book-otm-show-case">
-                        <img src="imgs/second-hand/HarryPotterOgDeVisesSten.png" alt="Harry Potter og de vises sten">
+                        <img class="book" src="imgs/second-hand/HarryPotterOgDeVisesSten.png" alt="Harry Potter og de vises sten">
                         <div show-case-content>
                             <h2>Harry Potter og de vises sten</h2>
                             
-                            <div class="auth-type-">
+                            <div class="auth-type-display">
                                 <div class="auth">
                                     <h5>Forfatter</h5>
                                     <h4>J.K. Rowling</h4>
@@ -110,39 +111,49 @@
     <!--###### Footer ######-->
     <footer>
         <div class="content-wrapper">
-            <h1><span class="change-to-OR">Fantasy</span>books</h1>
-            <div class="location"> 
-                <p>Egelykke 3, st.</p>
-                <p>8000 Århus C.</p>
+            <div class="foot-box-1">
+                <h1><span class="change-to-OR">Fantasy</span>books</h1>
+
+                <div class="location"> 
+                    <p>Egelykke 3, st.</p>
+                    <p>8000 Århus C.</p>
+                </div>
+
+                <h4>Telefon</h4>
+                <p>12 34 56 78</p>
+
+                <h4>Mail</h4>
+                <p>info@fantasybooks.dk</p>
+
             </div>
 
-            <h4>Telefon</h4>
-            <p>12 34 56 78</p>
-        
-            <h4>Mail</h4>
-            <p>info@fantasybooks.dk</p>
+            <div class="foot-box-2">
 
-            <h4>Åbningstider:</h4>
-            <p>Mandag - fredag: 10:00 - 18:00</p>
-            <p>Lørdag: 10:00 - 13:00</p>
+                <h4>Åbningstider:</h4>
+                <p>Mandag - fredag: 10:00 - 18:00</p>
+                <p>Lørdag: 10:00 - 13:00</p>
 
-            <h4>Fantasybooks på de sociale medier:</h4>
-            <div class="media-icons">
-                <a href="#">
-                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/>
-                    </svg>
-                </a>
-                <a href="#">
-                    <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z"/><path d="M360 176c-13.3 0-24-10.7-24-24s10.7-24 24-24c13.2 0 24 10.7 24 24s-10.8 24-24 24zM256 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0-32c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96z"/>
-                    </svg>
-                </a>
-                <a href="#"></a>
-                    <svg  class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/>
-                    </svg>
-                </a>
+                <h4>Følg os på de sociale medier:</h4>
+                <div class="media-icons">
+                    <a href="#">
+                         <svg class="social-icon facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M426.8 64H85.2C73.5 64 64 73.5 64 85.2v341.6c0 11.7 9.5 21.2 21.2 21.2H256V296h-45.9v-56H256v-41.4c0-49.6 34.4-76.6 78.7-76.6 21.2 0 44 1.6 49.3 2.3v51.8h-35.3c-24.1 0-28.7 11.4-28.7 28.2V240h57.4l-7.5 56H320v152h106.8c11.7 0 21.2-9.5 21.2-21.2V85.2c0-11.7-9.5-21.2-21.2-21.2z"/>
+                        </svg>
+                     </a>
+                     <a href="#">
+                            <svg class="social-icon instagram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z"/><path d="M360 176c-13.3 0-24-10.7-24-24s10.7-24 24-24c13.2 0 24 10.7 24 24s-10.8 24-24 24zM256 192c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64m0-32c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96z"/>
+                         </svg>
+                    </a>
+                    <a href="#">
+                        <svg  class="social-icon twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M492 109.5c-17.4 7.7-36 12.9-55.6 15.3 20-12 35.4-31 42.6-53.6-18.7 11.1-39.4 19.2-61.5 23.5C399.8 75.8 374.6 64 346.8 64c-53.5 0-96.8 43.4-96.8 96.9 0 7.6.8 15 2.5 22.1-80.5-4-151.9-42.6-199.6-101.3-8.3 14.3-13.1 31-13.1 48.7 0 33.6 17.2 63.3 43.2 80.7-16-.4-31-4.8-44-12.1v1.2c0 47 33.4 86.1 77.7 95-8.1 2.2-16.7 3.4-25.5 3.4-6.2 0-12.3-.6-18.2-1.8 12.3 38.5 48.1 66.5 90.5 67.3-33.1 26-74.9 41.5-120.3 41.5-7.8 0-15.5-.5-23.1-1.4C62.8 432 113.7 448 168.3 448 346.6 448 444 300.3 444 172.2c0-4.2-.1-8.4-.3-12.5C462.6 146 479 129 492 109.5z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
+
+            <img src="imgs/footer.jpg" alt="Et billed af Fantasy book store">
         </div>      
-        <img src="imgs/footer.jpg" alt="Et billed af Fantasy book store">     
+
     </footer>
+
 </body>
 </html>
