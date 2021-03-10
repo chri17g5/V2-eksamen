@@ -24,7 +24,11 @@ body{
     overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, p {
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, p, a {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -37,12 +41,17 @@ h2, h3, h4 {
     color: var(--main-fnt-clr);
 }
 
+h4 {
+    font-size: 24px;
+}
+
 h5 {
+    font-size: 18px;
     color:var(--BOTM-F-T-clr);
 }
 
-.change-to-OR{
-    color: var(--prim-clr);
+p {
+    font-size: 20px;
 }
 
 a {
@@ -54,13 +63,49 @@ a {
     margin: 0 auto;
 }
 
+.change-to-OR{
+    color: var(--prim-clr);
+}
+
+
+.cust-btn {
+    background-color: var(--prim-clr);
+    text-align: center;
+
+    display: inline-block;
+    
+    max-width: 400px;
+    width: 100%;
+
+    max-height: 75px;
+    height: 100%;
+
+    border-radius: 1rem;
+
+    text-align: center;
+    white-space: nowrap;
+}
+.cust-btn h4 {
+    color: white;
+}
+
 
 
 /* ##### Header & Navigation bar ###### */
 header {
     background: var(--prim-background-clr);
-    position: sticky;
+    position: fixed;
     margin: 0;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .main-nav a {
@@ -69,6 +114,11 @@ header {
 
 .main-nav li {
     list-style-type:none;
+    margin-left: 25px;
+}
+
+.hamburger {
+    display: none;
 }
 
 #toggle-menu {
@@ -76,7 +126,7 @@ header {
     cursor: pointer;
 }
 
-.create-user {
+.create-btn {
     color: var(--prim-clr);
     background: rgb(254, 125, 78,.30);
     border-style: solid;
@@ -84,6 +134,13 @@ header {
     border-width: 1px;
     border-radius: 10px;
     margin-bottom: 10px;
+
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+
+    text-align: center;
+    white-space: nowrap;
 }
 
 
@@ -96,7 +153,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
 
-    height: 400px;
+    height: 100vh;
 
     display: flex;
     justify-content: center;
@@ -107,6 +164,8 @@ header {
 
 .hero p {
     text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
     color: #ffffff;
 }
 
@@ -114,26 +173,53 @@ header {
 
 
 /* ##### Second hand ###### */
-.second-hand-top a {
-    display: inline-block;
-    width: 88px;
-}
 
 .second-hand-top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.second-hand-top a {
+    display: inline-block;
+    width: 200px;
+}
+
+.second-hand-selector{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .second-hand-selector li {
     list-style-type:none;
+    justify-content: space-evenly;
+}
+
+.second-hand-selector li a img {
+    height: 100%;
+    width: 80%;
 }
 
 
 
 /* ##### book of the month ###### */
+    .book-otm .content-wrapper {
+        display:flex;
+        flex-direction: row;
+
+        height: 75vh;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     .book-otm-intro {
         background-color: var(--BOTM-background-clr);
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
     }
 
     .book-otm-intro p {
@@ -144,6 +230,80 @@ header {
         color: var(--main-fnt-clr);
     }
 
+    .book-otm-show-case {
+        padding-right: 10%;
+        background-color: var(--show-case-background-clr);
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .book-otm-show-case img {
+        height: 70%;
+        margin: 30px;
+    }
+
+    .book-otm-show-case h5 {
+        margin-bottom: 0px;
+    }
+
+    .book-otm-show-case h4 {
+        margin-top: 0px;
+    }
+
+    .book-otm-show-case a {
+        max-width: 200px;
+    }
+
+    .auth-type-display {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .auth {
+        margin-right: 30px;
+    }
+
+
+
+
+/* ##### Book club ##### */
+.book-club {
+    background-image: url(imgs/Cover-Bogklub.jpg);
+    width: 100vw;
+    height: 754px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ##### Footer ##### */
+
+.location p {
+    margin-bottom: 0px;
+}
+
+footer a {
+    height: 50px;
+    width: 50px;
+}
+
+footer h4 {
+    margin-bottom: 0px;
+}
+
+footer p {
+    margin-top: 0px;
+}
+
+.social-icon {
+    fill: var(--prim-clr);
+    height: 50px;
+    width: 50px;
+}
+
+
+
 
 /* ##### Mobile first! designed after IPhone: 6/7/8/ iOS 11 ##### */
 /* Note: eye balled a bit of posistioning in some areas (change if time)*/
@@ -151,17 +311,17 @@ header {
 
     /* ##### Edits in gloab artibutes for mobile ##### */
     h1 {
-        font-size: 20px;
+        font-size: 22px;
     }
     h2 {
-        font-size: 18px;
+        font-size: 20px;
     }
     h4 {
-        font-size: 14px;
+        font-size: 16px;
     }
     
     p {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .content-wrapper {
@@ -172,12 +332,16 @@ header {
     /* ##### Navigation bar ###### */
     /* ##### hamburger menu is also created ##### */
     
+    header {
+        flex-direction: column;
+        z-index: 2;
+    }
+
     .hamburger {
         height: 20px;
         width: 20px;
-
-        right: 15px;
-        top: 5px;
+        display: block;
+        position: relative;
     }
 
     #toggle-menu {
@@ -186,8 +350,10 @@ header {
         width: 20px;
 
         position: absolute;
-        right: 15px;
-        top: 5px;
+        top: 45px;
+        left: 0px;
+
+        opacity: 0;
     }
 
     .main-nav {
@@ -205,19 +371,22 @@ header {
 
         width: 100vw;
 
+        flex-direction: column;
         justify-content: center;
     }
 
-    .create-user {
-        margin-left: 40% ;
-        width: 50px;
-    
+    .main-nav li {
+        margin-left: 0px;
     }
 
     .main-nav a {
         display: block;
         padding: 1rem;
         text-align: center;
+    }
+
+    .create-btn {
+        height: 100%;
     }
 
     #toggle-menu + .main-nav {
@@ -233,42 +402,100 @@ header {
 
     /* ##### mobile hero ###### */
 
+    .hero p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
 
 
 
     /* ##### mobile second hand ###### */
+    .book-otm {
+        position: relative;
+    }
+    
     .second-hand {
         margin-bottom: 30px;
     }
 
+    .second-hand h4 {
+        width: 100px;
+    }
+
     .second-hand-selector {
-        padding-left: 10px;
-        padding-right: 10px;
+        flex-direction: column;
+    
     }
 
     .second-hand-selector  li{
         margin-bottom: 10px;
+        height: 100%;
+        width: 100%;
     }
 
 
 
 
     /* ##### mobile book of the month ###### */
-    /* Note for next time flex order */
+    .book-otm {
+        overflow-block: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+        height: 100%;
+    }
+
+    .book-otm .content-wrapper {
+        flex-direction: column;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
     .book-otm-intro {
         text-align: center;
-        height: 300px;
-        margin-bottom: 20px;
     }
 
     .book-otm-intro p {
         display: inline-block;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
+
+    .book-otm-show-case {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
 
     .book-otm-show-case img {
         height: 50%;
-        width: 50%;
+    }
+
+    .book-otm-show-case a {
+        margin-left: 35%;
+    }
+
+
+
+
+    /* ##### Mobile book club ##### */
+    .book-club {
+        height: 150px;
+    }
+
+    .book-club .cust-btn {
+        height: 70px;
+        width: 200px;
+
+        margin-top: 30px;
+        margin-left: 5px;
+    }
+
+
+
+    /* ##### Mobile footer ##### */
+    footer img {
+        width: 100vw; 
     }
 }
